@@ -1,32 +1,41 @@
 import readlineSync from 'readline-sync';
 import getUserName from '../src/cli.js';
 
-const even = () => {
+const calc = () => {
   console.log('Welcome to the Brain Games!');
 
   const userName = getUserName();
 
   console.log(`Hello, ${userName}!`);
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
     const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
     const randomNumber = getRandomNumber(1, 100);
+    const randomNumber2 = getRandomNumber(1, 100);
 
-    const userAnswer = readlineSync.question(
-      `Question: ${randomNumber}\nYour answer: `,
-    );
+    const operations = '+-*';
+    const randomOperation = operations[getRandomNumber(0, 3)];
 
     const correctAnswer = () => {
-      if (randomNumber % 2 === 0) {
-        return 'yes';
+      if (randomOperation === '+') {
+        return randomNumber + randomNumber2;
+      } if (randomOperation === '-') {
+        return randomNumber - randomNumber2;
+      } if (randomOperation === '*') {
+        return randomNumber * randomNumber2;
       }
-      return 'no';
     };
 
-    if (userAnswer === correctAnswer()) {
+    const userAnswer = readlineSync.question(
+      'Question: '
+        + `${randomNumber} ${randomOperation} ${randomNumber2}`
+        + '\nYour answer: ',
+    );
+
+    if (+userAnswer === correctAnswer()) {
       console.log('Correct!');
     } else {
       console.log(
@@ -38,4 +47,4 @@ const even = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default even;
+export default calc;
