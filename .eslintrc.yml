@@ -7,3 +7,8 @@ env:
 rules:
   no-console: 0
   import/extensions: 0
+  no-plusplus: 0
+  no-shadow: 0
+  no-unreachable: 0
+  default-case: 0
+  consistent-return: 0

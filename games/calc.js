@@ -20,12 +20,16 @@ const calc = () => {
     const randomOperation = operations[getRandomNumber(0, 3)];
 
     const correctAnswer = () => {
-      if (randomOperation === '+') {
-        return randomNumber + randomNumber2;
-      } if (randomOperation === '-') {
-        return randomNumber - randomNumber2;
-      } if (randomOperation === '*') {
-        return randomNumber * randomNumber2;
+      switch (randomOperation) {
+        case '+':
+          return randomNumber + randomNumber2;
+          break;
+        case '-':
+          return randomNumber - randomNumber2;
+          break;
+        case '*':
+          return randomNumber * randomNumber2;
+          break;
       }
     };
 

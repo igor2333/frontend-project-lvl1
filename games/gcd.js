@@ -26,7 +26,7 @@ const gcd = () => {
     const correctAnswer = nod(randomNumber, randomNumber2);
 
     const userAnswer = readlineSync.question(
-      'Question: ' + `${randomNumber} ${randomNumber2}` + '\nYour answer: ',
+      `Question:  + ${randomNumber} ${randomNumber2} + '\nYour answer:`,
     );
 
     if (+userAnswer === correctAnswer) {
