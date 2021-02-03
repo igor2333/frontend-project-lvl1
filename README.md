@@ -22,7 +22,7 @@
 
 Игра "Простое ли число?"
 
-[![asciicast](https://asciinema.org/a/gAVdO0dYcgw61B7zjWeExbkFf.svg)](https://asciinema.org/a/gAVdO0dYcgw61B7zjWeExbkFf)
+[![asciicast](https://asciinema.org/a/D7NrLpSUDyOYrlHSE9iwHRxdh.svg)](https://asciinema.org/a/D7NrLpSUDyOYrlHSE9iwHRxdh)
 
 
 

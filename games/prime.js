@@ -19,18 +19,18 @@ const prime = () => {
       `Question: ${randomNumber}\nYour answer: `,
     );
 
-    const correctAnswer = (randomNumber) => {
-      for (let i = 2; i < randomNumber; i++) {
-        if (randomNumber % i === 0) return 'no';
+    const correctAnswer = (num) => {
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) return 'no';
       }
       return 'yes';
     };
 
-    if (userAnswer === correctAnswer()) {
+    if (userAnswer === correctAnswer(randomNumber)) {
       console.log('Correct!');
     } else {
       console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer()}'. \nLet's try again, ${userName}!`,
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer(randomNumber)}'. \nLet's try again, ${userName}!`,
       );
       return;
     }
