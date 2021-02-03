@@ -4,12 +4,25 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-[![asciicast](https://asciinema.org/a/8385D7hp5Cm8ilWrQ2PJrb9WK.svg)](https://asciinema.org/a/8385D7hp5Cm8ilWrQ2PJrb9WK)
+Игра: "Проверка на чётность"
 
-[![asciicast](https://asciinema.org/a/kRfODGg2ZLxckykRG9V27WZd0.svg)](https://asciinema.org/a/kRfODGg2ZLxckykRG9V27WZd0)
+[![asciicast](https://asciinema.org/a/oDjoonu94n9nuyq3mPud2SQ7K.svg)](https://asciinema.org/a/oDjoonu94n9nuyq3mPud2SQ7K)
 
-[![asciicast](https://asciinema.org/a/fvAimC4vGdC1BznxTzxRuOJpO.svg)](https://asciinema.org/a/fvAimC4vGdC1BznxTzxRuOJpO)
+Игра: "Калькулятор" 
 
-[![asciicast](https://asciinema.org/a/bgF5j2WdHL4fkYV0q2d76BuyA.svg)](https://asciinema.org/a/bgF5j2WdHL4fkYV0q2d76BuyA)
+[![asciicast](https://asciinema.org/a/NF4qqFyaXmMRhkSTK0IHq1WSy.svg)](https://asciinema.org/a/NF4qqFyaXmMRhkSTK0IHq1WSy)
 
-[![asciicast](https://asciinema.org/a/bV9gwS7rhzCy51LxfyrXBvJWJ.svg)](https://asciinema.org/a/bV9gwS7rhzCy51LxfyrXBvJWJ)
+Игра: "НОД"
+
+[![asciicast](https://asciinema.org/a/R2BiLJE3Nig8C5JniSsABqwoW.svg)](https://asciinema.org/a/R2BiLJE3Nig8C5JniSsABqwoW)
+
+Игра "Арифметическая прогрессия"
+
+[![asciicast](https://asciinema.org/a/yOJLGq40EEa7CgvDfsa3Q37eD.svg)](https://asciinema.org/a/yOJLGq40EEa7CgvDfsa3Q37eD)
+
+Игра "Простое ли число?"
+
+[![asciicast](https://asciinema.org/a/gAVdO0dYcgw61B7zjWeExbkFf.svg)](https://asciinema.org/a/gAVdO0dYcgw61B7zjWeExbkFf)
+
+
+
