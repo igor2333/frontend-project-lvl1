@@ -24,6 +24,9 @@ const calc = () => {
       case '*':
         correctAnswer = randomNumber * randomNumber2;
         break;
+
+      default:
+        return false;
     }
 
     return [question, String(correctAnswer)];
