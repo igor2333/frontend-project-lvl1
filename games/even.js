@@ -1,41 +1,17 @@
-import readlineSync from 'readline-sync';
-import getUserName from '../src/cli.js';
+import gameProcess from '../src/index.js';
+import random from '../src/libs/random.js';
 
 const even = () => {
-  console.log('Welcome to the Brain Games!');
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const userName = getUserName();
+  const questionAndCorrectAnswer = () => {
+    const randomNumber = random(1, 100);
+    const question = `Question: ${randomNumber}\nYour answer: `;
+    const correctAnswer = randomNumber % 2 ? 'no' : 'yes';
+    return [question, correctAnswer];
+  };
 
-  console.log(`Hello, ${userName}!`);
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  for (let i = 0; i < 3; i += 1) {
-    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-    const randomNumber = getRandomNumber(1, 100);
-
-    const userAnswer = readlineSync.question(
-      `Question: ${randomNumber}\nYour answer: `,
-    );
-
-    const correctAnswer = () => {
-      if (randomNumber % 2 === 0) {
-        return 'yes';
-      }
-      return 'no';
-    };
-
-    if (userAnswer === correctAnswer()) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer()}'. \nLet's try again, ${userName}!`,
-      );
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+  gameProcess(description, questionAndCorrectAnswer);
 };
 
 export default even;
