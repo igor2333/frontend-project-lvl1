@@ -1,54 +1,35 @@
-import readlineSync from 'readline-sync';
-import getUserName from '../src/cli.js';
+import gameProcess from '../src/index.js';
+import random from '../src/libs/random.js';
+
+const RANDOM_NUMBER_MAX = 20;
 
 const calc = () => {
-  console.log('Welcome to the Brain Games!');
+  const description = 'What is the result of the expression?';
 
-  const userName = getUserName();
-
-  console.log(`Hello, ${userName}!`);
-
-  console.log('What is the result of the expression?');
-
-  for (let i = 0; i < 3; i += 1) {
-    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-    const randomNumber = getRandomNumber(1, 100);
-    const randomNumber2 = getRandomNumber(1, 100);
-
+  const questionAndCorrectAnswer = () => {
+    const randomNumber = random(1, RANDOM_NUMBER_MAX);
+    const randomNumber2 = random(1, RANDOM_NUMBER_MAX);
     const operations = '+-*';
-    const randomOperation = operations[getRandomNumber(0, 3)];
+    const randomOperation = operations[random(0, 3)];
+    const question = `Question: ${randomNumber} ${randomOperation} ${randomNumber2}\nYour answer: `;
 
-    const correctAnswer = () => {
-      switch (randomOperation) {
-        case '+':
-          return randomNumber + randomNumber2;
-          break;
-        case '-':
-          return randomNumber - randomNumber2;
-          break;
-        case '*':
-          return randomNumber * randomNumber2;
-          break;
-      }
-    };
-
-    const userAnswer = readlineSync.question(
-      'Question: '
-        + `${randomNumber} ${randomOperation} ${randomNumber2}`
-        + '\nYour answer: ',
-    );
-
-    if (+userAnswer === correctAnswer()) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer()}'. \nLet's try again, ${userName}!`,
-      );
-      return;
+    let correctAnswer;
+    switch (randomOperation) {
+      case '+':
+        correctAnswer = randomNumber + randomNumber2;
+        break;
+      case '-':
+        correctAnswer = randomNumber - randomNumber2;
+        break;
+      case '*':
+        correctAnswer = randomNumber * randomNumber2;
+        break;
     }
-  }
-  console.log(`Congratulations, ${userName}!`);
+
+    return [question, String(correctAnswer)];
+  };
+
+  gameProcess(description, questionAndCorrectAnswer);
 };
 
 export default calc;
