@@ -20,5 +20,4 @@ jobs:
       # Runs the Super-Linter action
       - name: Run Linter
         run:
-          make install
-          make lint 
+          make lint
