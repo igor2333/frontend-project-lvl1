@@ -14,7 +14,7 @@ const gcd = () => {
   const questionAndCorrectAnswer = () => {
     const randomNumber = random(1, 100);
     const randomNumber2 = random(1, 100);
-    const question = `Question: ${randomNumber} ${randomNumber2} \nYour answer: `;
+    const question = `Question: ${randomNumber} ${randomNumber2}`;
     const correctAnswer = nod(randomNumber, randomNumber2);
     return [question, String(correctAnswer)];
   };

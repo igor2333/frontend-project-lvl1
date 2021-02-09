@@ -7,7 +7,7 @@ const even = () => {
 
   const questionAndCorrectAnswer = () => {
     const randomNumber = random(1, 100);
-    const question = `Question: ${randomNumber}\nYour answer: `;
+    const question = `Question: ${randomNumber}`;
     const correctAnswer = isEven(randomNumber) ? 'no' : 'yes';
     return [question, correctAnswer];
   };

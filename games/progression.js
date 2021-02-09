@@ -15,7 +15,7 @@ const progression = () => {
     const index = random(0, 9);
     const value = str[index];
     str[index] = '..';
-    const question = `Question: ${str.join(' ')}\nYour answer: `;
+    const question = `Question: ${str.join(' ')}`;
     const correctAnswer = value;
     return [question, String(correctAnswer)];
   };

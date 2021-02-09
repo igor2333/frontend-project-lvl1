@@ -1,17 +1,17 @@
 import gameProcess from '../src/index.js';
 import random from '../src/libs/random.js';
 
-const RANDOM_NUMBER_MAX = 20;
+const randomNumberMax = 20;
 
 const calc = () => {
   const description = 'What is the result of the expression?';
 
   const questionAndCorrectAnswer = () => {
-    const randomNumber = random(1, RANDOM_NUMBER_MAX);
-    const randomNumber2 = random(1, RANDOM_NUMBER_MAX);
+    const randomNumber = random(1, randomNumberMax);
+    const randomNumber2 = random(1, randomNumberMax);
     const operations = '+-*';
     const randomOperation = operations[random(0, 3)];
-    const question = `Question: ${randomNumber} ${randomOperation} ${randomNumber2}\nYour answer: `;
+    const question = `Question: ${randomNumber} ${randomOperation} ${randomNumber2}`;
 
     let correctAnswer;
     switch (randomOperation) {

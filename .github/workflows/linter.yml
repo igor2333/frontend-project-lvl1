@@ -20,4 +20,5 @@ jobs:
       # Runs the Super-Linter action
       - name: Run Linter
         run:
-          make lint
+          make lint 
+        # Runs npx eslint .

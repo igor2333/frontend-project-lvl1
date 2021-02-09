@@ -15,7 +15,8 @@ const gameProcess = (description, questionAndCorrectAnswer) => {
 
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = questionAndCorrectAnswer();
-    const userAnswer = readlineSync.question(question);
+    console.log(question);
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
