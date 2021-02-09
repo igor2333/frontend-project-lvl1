@@ -2,7 +2,6 @@ import gameProcess from '../src/index.js';
 import random from '../src/libs/random.js';
 
 const isEven = (num) => num % 2;
-
 const even = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
